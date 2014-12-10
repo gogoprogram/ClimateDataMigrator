@@ -1,0 +1,38 @@
+c:\users\baba\documents\visual studio 2010\Projects\DatabaseMigratior\DatabaseMigratior\bin\Debug\DatabaseMigratior.exe
+c:\users\baba\documents\visual studio 2010\Projects\DatabaseMigratior\DatabaseMigratior\bin\Debug\DatabaseMigratior.pdb
+c:\users\baba\documents\visual studio 2010\Projects\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.Form1.resources
+c:\users\baba\documents\visual studio 2010\Projects\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.Properties.Resources.resources
+c:\users\baba\documents\visual studio 2010\Projects\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.csproj.GenerateResource.Cache
+c:\users\baba\documents\visual studio 2010\Projects\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.exe
+c:\users\baba\documents\visual studio 2010\Projects\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.pdb
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.exe
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.pdb
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.csprojResolveAssemblyReference.cache
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.Form1.resources
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.Properties.Resources.resources
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.csproj.GenerateResource.Cache
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\bin\Debug\DatabaseMigratior.exe
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\bin\Debug\DatabaseMigratior.pdb
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\bin\Debug\MySql.Data.dll
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\bin\Debug\RDotNet.dll
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\bin\Debug\RDotNet.NativeLibrary.dll
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\bin\Debug\RDotNet.xml
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\bin\Debug\RDotNet.NativeLibrary.xml
+C:\Users\msharifi\Desktop\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.Form2.resources
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\obj\x86\Debug\DatabaseMigratior.exe
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\obj\x86\Debug\DatabaseMigratior.pdb
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\bin\Debug\DatabaseMigratior.exe
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\bin\Debug\DatabaseMigratior.pdb
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\bin\Debug\RDotNet.dll
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\bin\Debug\RDotNet.NativeLibrary.dll
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\bin\Debug\RDotNet.xml
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\bin\Debug\RDotNet.NativeLibrary.xml
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\obj\x86\Debug\DatabaseMigratior.Form1.resources
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\obj\x86\Debug\DatabaseMigratior.Form2.resources
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\obj\x86\Debug\DatabaseMigratior.Properties.Resources.resources
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\databasemigratior\bin\Debug\DatabaseMigratior.exe.config
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.csprojResolveAssemblyReference.cache
+D:\E DRIVE\DatabaseMigratior\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.csproj.GenerateResource.Cache
+D:\E DRIVE\DatabaseMigrator\DatabaseMigratior\DatabaseMigratior\bin\Debug\DatabaseMigratior.exe.config
+D:\E DRIVE\DatabaseMigrator\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.exe
+D:\E DRIVE\DatabaseMigrator\DatabaseMigratior\DatabaseMigratior\obj\x86\Debug\DatabaseMigratior.pdb
