@@ -25,3 +25,30 @@ D:\E DRIVE\DatabaseMigrator\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\Data
 D:\E DRIVE\DatabaseMigrator\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigrator.csproj.GenerateResource.Cache
 D:\E DRIVE\DatabaseMigrator\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.exe
 D:\E DRIVE\DatabaseMigrator\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.pdb
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\bin\Debug\DatabaseMigratior.exe.config
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.exe
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.pdb
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\bin\Debug\DatabaseMigratior.exe
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\bin\Debug\DatabaseMigratior.pdb
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\bin\Debug\RDotNet.dll
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\bin\Debug\RDotNet.NativeLibrary.dll
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\bin\Debug\RDotNet.xml
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\bin\Debug\RDotNet.NativeLibrary.xml
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigrator.csprojResolveAssemblyReference.cache
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.Form1.resources
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.Form2.resources
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.Properties.Resources.resources
+E:\Production\CLIMATE_DATA_MIGRATOR\ProjectFiles\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigrator.csproj.GenerateResource.Cache
+E:\Projects\DatabaseMigrator\DatabaseMigrator\bin\Debug\DatabaseMigratior.exe.config
+E:\Projects\DatabaseMigrator\DatabaseMigrator\bin\Debug\DatabaseMigratior.exe
+E:\Projects\DatabaseMigrator\DatabaseMigrator\bin\Debug\DatabaseMigratior.pdb
+E:\Projects\DatabaseMigrator\DatabaseMigrator\bin\Debug\RDotNet.dll
+E:\Projects\DatabaseMigrator\DatabaseMigrator\bin\Debug\RDotNet.NativeLibrary.dll
+E:\Projects\DatabaseMigrator\DatabaseMigrator\bin\Debug\RDotNet.xml
+E:\Projects\DatabaseMigrator\DatabaseMigrator\bin\Debug\RDotNet.NativeLibrary.xml
+E:\Projects\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.Form1.resources
+E:\Projects\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.Form2.resources
+E:\Projects\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.Properties.Resources.resources
+E:\Projects\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigrator.csproj.GenerateResource.Cache
+E:\Projects\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.exe
+E:\Projects\DatabaseMigrator\DatabaseMigrator\obj\x86\Debug\DatabaseMigratior.pdb

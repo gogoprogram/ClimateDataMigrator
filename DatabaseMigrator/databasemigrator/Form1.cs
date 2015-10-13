@@ -525,7 +525,9 @@ namespace DatabaseMigratior
                     try
                     {
                         cmd = new MySqlCommand(sql, conn);
-                        db_rows_count += cmd.ExecuteNonQuery();
+                        int insertOrUpdate = cmd.ExecuteNonQuery();
+                        db_rows_count = insertOrUpdate > 1 ? db_rows_count + 1 : db_rows_count + insertOrUpdate;
+
                     }
                     catch (MySqlException e)
                     {
@@ -586,7 +588,9 @@ namespace DatabaseMigratior
                     try
                     {
                         cmd = new MySqlCommand(sql, conn);
-                        db_rows_count += cmd.ExecuteNonQuery();
+                        int insertOrUpdate = cmd.ExecuteNonQuery();
+                        db_rows_count = insertOrUpdate > 1 ? db_rows_count + 1 : db_rows_count + insertOrUpdate;
+
                     }
                     catch (MySqlException e)
                     {
@@ -774,7 +778,8 @@ namespace DatabaseMigratior
                     try
                     {
                         cmd = new MySqlCommand(sql, conn);
-                        db_rows_count += cmd.ExecuteNonQuery();
+                        int insertOrUpdate = cmd.ExecuteNonQuery();
+                        db_rows_count = insertOrUpdate > 1 ? db_rows_count + 1 : db_rows_count + insertOrUpdate;
                     }
                     catch (MySqlException e)
                     {
@@ -1042,7 +1047,9 @@ namespace DatabaseMigratior
                     try
                     {
                         cmd = new MySqlCommand(sql, conn);
-                        rows_affected += cmd.ExecuteNonQuery();
+                        int insertOrUpdate = cmd.ExecuteNonQuery();
+                        rows_affected = insertOrUpdate > 1 ? rows_affected + 1 : rows_affected + insertOrUpdate;
+
                     }
                     catch (MySqlException e)
                     {
@@ -1058,7 +1065,7 @@ namespace DatabaseMigratior
             else if (radioButton5.Checked == true) //in case of soilMoist file
             {
                 double[] moistData_Avg = new double[15];
-                double[,] moistdata = new double[24, 15];
+                double[,] moistdata = new double[30, 15];
                 i = 0;
                 k = 0; rows_affected = 0;
 
@@ -1098,6 +1105,10 @@ namespace DatabaseMigratior
                     do
                     {
                         //SoilMoisture_5_daily GRASS 
+                        if (values[23]=="-99.99" && !(values[24]=="-99.99"))
+                            values[23] = "";
+                        if (values[24]=="-99.99" && !(values[23]=="-99.99"))
+                            values[24] = "";
                         if (values[23].Equals("") && values[24].Equals(""))
                             moistdata[n, 0] = -99.99;
                         else if (!values[23].Equals("") && !values[24].Equals(""))
@@ -1106,8 +1117,12 @@ namespace DatabaseMigratior
                             moistdata[n, 0] = double.Parse(values[23]);
                         else if (!values[24].Equals(""))
                             moistdata[n, 0] = double.Parse(values[24]);
-                        
+
                         //SoilMoisture_10_daily GRASS 
+                        if (values[4]=="-99.99" && !(values[5]=="-99.99"))
+                            values[4] = "";
+                        if (values[5]=="-99.99" && !(values[4]=="-99.99"))
+                            values[5] = "";
                         if (values[4].Equals("") && values[5].Equals(""))
                             moistdata[n, 1] = -99.99;
                         else if (!values[4].Equals("") && !values[5].Equals(""))
@@ -1118,6 +1133,11 @@ namespace DatabaseMigratior
                             moistdata[n, 1] = double.Parse(values[5]);
 
                         //SoilMoisture_20_daily GRASS
+                        if (values[10]=="-99.99" && !(values[11]=="-99.99"))
+                            values[10] = "";
+                        if (values[11]=="-99.99" && !(values[10]=="-99.99"))
+                            values[11] = "";
+
                         if (values[10].Equals("") && values[11].Equals(""))
                             moistdata[n, 2] = -99.99;
                         else if (!values[10].Equals("") && !values[11].Equals(""))
@@ -1140,6 +1160,10 @@ namespace DatabaseMigratior
                             moistdata[n, 4] = double.Parse(values[27]);
 
                         //SoilMoisture_5_daily BARE 
+                        if (values[21]=="-99.99" && !(values[22]=="-99.99"))
+                            values[21] = "";
+                        if (values[22]=="-99.99" && !(values[21]=="-99.99"))
+                            values[22] = "";
                         if (values[21].Equals("") && values[22].Equals(""))
                             moistdata[n, 5] = -99.99;
                         else if (!values[21].Equals("") && !values[22].Equals(""))
@@ -1150,6 +1174,10 @@ namespace DatabaseMigratior
                             moistdata[n, 5] = double.Parse(values[22]);
 
                         //SoilMoisture_10_daily BARE 
+                        if (values[2]=="-99.99" && !(values[3]=="-99.99"))
+                            values[2] = "";
+                        if (values[3]=="-99.99" && !(values[2]=="-99.99"))
+                            values[3] = "";
                         if (values[2].Equals("") && values[3].Equals(""))
                             moistdata[n, 6] = -99.99;
                         else if (!values[2].Equals("") && !values[3].Equals(""))
@@ -1160,6 +1188,10 @@ namespace DatabaseMigratior
                             moistdata[n, 6] = double.Parse(values[3]);
 
                         //SoilMoisture_20_daily BARE
+                        if (values[8]=="-99.99" && !(values[9]=="-99.99"))
+                            values[8] = "";
+                        if (values[9]=="-99.99" && !(values[8]=="-99.99"))
+                            values[9] = "";
                         if (values[8].Equals("") && values[9].Equals(""))
                             moistdata[n, 7] = -99.99;
                         else if (!values[8].Equals("") && !values[9].Equals(""))
@@ -1170,6 +1202,10 @@ namespace DatabaseMigratior
                             moistdata[n, 7] = double.Parse(values[9]);
 
                         //SoilMoisture_30_daily BARE
+                        if (values[14]=="-99.99" && !(values[15]=="-99.99"))
+                            values[14] = "";
+                        if (values[15]=="-99.99" && !(values[14]=="-99.99"))
+                            values[15] = "";
                         if (values[14].Equals("") && values[15].Equals(""))
                             moistdata[n, 8] = -99.99;
                         else if (!values[14].Equals("") && !values[15].Equals(""))
@@ -1180,6 +1216,10 @@ namespace DatabaseMigratior
                             moistdata[n, 8] = double.Parse(values[15]);
 
                         //SoilMoisture_35_daily BARE
+                        if (values[19]=="-99.99" && !(values[20]=="-99.99"))
+                            values[19] = "";
+                        if (values[20]=="-99.99" && !(values[19]=="-99.99"))
+                            values[20] = "";
                         if (values[19].Equals("") && values[20].Equals(""))
                             moistdata[n, 9] = -99.99;
                         else if (!values[19].Equals("") && !values[20].Equals(""))
@@ -1190,6 +1230,10 @@ namespace DatabaseMigratior
                             moistdata[n, 9] = double.Parse(values[20]);
 
                         //SoilMoisture_5_daily SHRUB 
+                        if (values[25]=="-99.99" && !(values[26]=="-99.99"))
+                            values[25] = "";
+                        if (values[26]=="-99.99" && !(values[25]=="-99.99"))
+                            values[26] = "";
                         if (values[25].Equals("") && values[26].Equals(""))
                             moistdata[n, 10] = -99.99;
                         else if (!values[25].Equals("") && !values[26].Equals(""))
@@ -1200,6 +1244,10 @@ namespace DatabaseMigratior
                             moistdata[n, 10] = double.Parse(values[26]);
 
                         //SoilMoisture_10_daily SHRUB 
+                        if (values[6]=="-99.99" && !(values[7]=="-99.99"))
+                            values[6] = "";
+                        if (values[7]=="-99.99" && !(values[6]=="-99.99"))
+                            values[7] = "";
                         if (values[6].Equals("") && values[7].Equals(""))
                             moistdata[n, 11] = -99.99;
                         else if (!values[6].Equals("") && !values[7].Equals(""))
@@ -1210,6 +1258,10 @@ namespace DatabaseMigratior
                             moistdata[n, 11] = double.Parse(values[7]);
 
                         //SoilMoisture_20_daily SHRUB
+                        if (values[12]=="-99.99" && !(values[13]=="-99.99"))
+                            values[12] = "";
+                        if (values[13]=="-99.99" && !(values[12]=="-99.99"))
+                            values[13] = "";
                         if (values[12].Equals("") && values[13].Equals(""))
                             moistdata[n, 12] = -99.99;
                         else if (!values[12].Equals("") && !values[13].Equals(""))
@@ -1220,6 +1272,10 @@ namespace DatabaseMigratior
                             moistdata[n, 12] = double.Parse(values[13]);
 
                         //SoilMoisture_30_daily SHRUB
+                        if (values[17]=="-99.99" && !(values[18]=="-99.99"))
+                            values[17] = "";
+                        if (values[18]=="-99.99" && !(values[17]=="-99.99"))
+                            values[18] = "";
                         if (values[17].Equals("") && values[18].Equals(""))
                             moistdata[n, 13] = -99.99;
                         else if (!values[17].Equals("") && !values[18].Equals(""))
@@ -1230,6 +1286,10 @@ namespace DatabaseMigratior
                             moistdata[n, 13] = double.Parse(values[18]);
 
                         //SoilMoisture_50_daily SHRUB
+                        if (values[28]=="-99.99" && !(values[29]=="-99.99"))
+                            values[28] = "";
+                        if (values[29]=="-99.99" && !(values[28]=="-99.99"))
+                            values[29] = "";
                         if (values[28].Equals("") && values[29].Equals(""))
                             moistdata[n, 14] = -99.99;
                         else if (!values[28].Equals("") && !values[29].Equals(""))
@@ -1293,7 +1353,8 @@ namespace DatabaseMigratior
                     try
                     {
                         cmd = new MySqlCommand(sql, conn);
-                        rows_affected += cmd.ExecuteNonQuery();
+                        int insertOrUpdate = cmd.ExecuteNonQuery();
+                        rows_affected = insertOrUpdate > 1 ? rows_affected + 1 : rows_affected + insertOrUpdate;
                     }
                     catch (MySqlException e)
                     {
@@ -1507,7 +1568,8 @@ namespace DatabaseMigratior
                     foreach (string commandString in sqlCommands)
                     {
                         MySqlCommand cmd = new MySqlCommand(commandString, conn, trans);
-                        db_row_count += cmd.ExecuteNonQuery();
+                        int insertOrUpdate = cmd.ExecuteNonQuery();
+                        db_row_count = insertOrUpdate > 1 ? db_row_count+1 : db_row_count + insertOrUpdate;
                     }
 
                     trans.Commit(); 
@@ -1911,7 +1973,8 @@ namespace DatabaseMigratior
                     try
                     {
                         cmd = new MySqlCommand(sql, conn);
-                        db_rows_count += cmd.ExecuteNonQuery();
+                        int insertOrUpdate = cmd.ExecuteNonQuery();
+                        db_rows_count = insertOrUpdate > 1 ? db_rows_count + 1 : db_rows_count + insertOrUpdate;
                     }
                     catch (MySqlException e)
                     {
@@ -2035,7 +2098,9 @@ namespace DatabaseMigratior
                     try
                     {
                         cmd = new MySqlCommand(sql, conn);
-                        db_rows_count += cmd.ExecuteNonQuery();
+                        int insertOrUpdate = cmd.ExecuteNonQuery();
+                        db_rows_count = insertOrUpdate > 1 ? db_rows_count + 1 : db_rows_count + insertOrUpdate;
+
                     }
                     catch (MySqlException e)
                     {
@@ -2334,7 +2399,10 @@ namespace DatabaseMigratior
                 try
                 {
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
-                    db_row_count += cmd.ExecuteNonQuery();                    
+                    int insertOrUpdate = cmd.ExecuteNonQuery();
+                    db_row_count = insertOrUpdate > 1 ? db_row_count + 1 : db_row_count + insertOrUpdate;
+
+
                 }
                 catch (MySqlException e)
                 {
@@ -2637,9 +2705,15 @@ namespace DatabaseMigratior
                 double pptdailymm = -99.9;
                 double rhdailymin = Double.MaxValue;
                 double rhdailymax = Double.MinValue;
-                double[] soilandtemp = new double[30];
+               // double [] soilandtemp = new double[30];
+                double[,] soilandtemp = new double[30,2]; //column is used for storing count of values
 
                 int tdailyavg_count = 0;
+
+                //Initialize soilandtemp count
+                for(int soilTempCount1 = 0; soilTempCount1<soilandtemp.GetLength(0);soilTempCount1++)
+                    soilandtemp[soilTempCount1, 1] = 0;
+
 
                 do
                 {
@@ -2678,70 +2752,131 @@ namespace DatabaseMigratior
                         rhdailymax = double.Parse(values[(int)columnIndex.RH_DAILY_MAX]);
 
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_5_DAILY_DUNE]) != -99.9)
-                        soilandtemp[0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_5_DAILY_DUNE]);
+                        { soilandtemp[0,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_5_DAILY_DUNE]);
+                          soilandtemp[0,1]+=1.0;}
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_10_DAILY_DUNE]) != -99.9)
-                        soilandtemp[1] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_10_DAILY_DUNE]);
+                        {  soilandtemp[1,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_10_DAILY_DUNE]);
+                            soilandtemp[1, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_20_DAILY_DUNE]) != -99.9)
-                        soilandtemp[2] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_20_DAILY_DUNE]);
+                        { soilandtemp[2,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_20_DAILY_DUNE]);
+                            soilandtemp[2, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_50_DAILY_DUNE]) != -99.9)
-                        soilandtemp[3] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_50_DAILY_DUNE]);
+                        {  soilandtemp[3,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_50_DAILY_DUNE]);
+                            soilandtemp[3, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_100_DAILY_DUNE]) != -99.9)
-                        soilandtemp[4] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_100_DAILY_DUNE]);
+                        { soilandtemp[4,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_100_DAILY_DUNE]);
+                            soilandtemp[4, 1] += 1.0;
+                        }
 
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_5_DAILY_GRASS]) != -99.9)
-                        soilandtemp[5] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_5_DAILY_GRASS]);
+                        { soilandtemp[5,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_5_DAILY_GRASS]);
+                            soilandtemp[5, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_10_DAILY_GRASS]) != -99.9)
-                        soilandtemp[6] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_10_DAILY_GRASS]);
+                        { soilandtemp[6,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_10_DAILY_GRASS]);
+                            soilandtemp[6, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_20_DAILY_GRASS]) != -99.9)
-                        soilandtemp[7] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_20_DAILY_GRASS]);
+                        { soilandtemp[7,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_20_DAILY_GRASS]);
+                            soilandtemp[7, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_50_DAILY_GRASS]) != -99.9)
-                        soilandtemp[8] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_50_DAILY_GRASS]);
+                        { soilandtemp[8,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_50_DAILY_GRASS]);
+                            soilandtemp[8, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_100_DAILY_GRASS]) != -99.9)
-                        soilandtemp[9] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_100_DAILY_GRASS]);
+                        { soilandtemp[9,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_100_DAILY_GRASS]);
+                            soilandtemp[9, 1] += 1.0;
+                        }
 
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_5_DAILY_BARE]) != -99.9)
-                        soilandtemp[10] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_5_DAILY_BARE]);
+                        { soilandtemp[10,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_5_DAILY_BARE]);
+                            soilandtemp[10, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_10_DAILY_BARE]) != -99.9)
-                        soilandtemp[11] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_10_DAILY_BARE]);
+                        { soilandtemp[11,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_10_DAILY_BARE]);
+                            soilandtemp[11, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_20_DAILY_BARE]) != -99.9)
-                        soilandtemp[12] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_20_DAILY_BARE]);
+                        { soilandtemp[12,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_20_DAILY_BARE]);
+                            soilandtemp[12, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_50_DAILY_BARE]) != -99.9)
-                        soilandtemp[13] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_50_DAILY_BARE]);
+                        { soilandtemp[13,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_50_DAILY_BARE]);
+                            soilandtemp[13, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_MOISTURE_100_DAILY_BARE]) != -99.9)
-                        soilandtemp[14] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_100_DAILY_BARE]);
+                        { soilandtemp[14,0] += double.Parse(values[(int)columnIndex.SOIL_MOISTURE_100_DAILY_BARE]);
+                            soilandtemp[14, 1] += 1.0;
+                        }
 
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_5_DAILY_DUNE]) != -99.9)
-                        soilandtemp[15] += double.Parse(values[(int)columnIndex.SOIL_TEMP_5_DAILY_DUNE]);
+                        { soilandtemp[15,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_5_DAILY_DUNE]);
+                            soilandtemp[15, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_10_DAILY_DUNE]) != -99.9)
-                        soilandtemp[16] += double.Parse(values[(int)columnIndex.SOIL_TEMP_10_DAILY_DUNE]);
+                        { soilandtemp[16,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_10_DAILY_DUNE]);
+                            soilandtemp[16, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_20_DAILY_DUNE]) != -99.9)
-                        soilandtemp[17] += double.Parse(values[(int)columnIndex.SOIL_TEMP_20_DAILY_DUNE]);
+                        { soilandtemp[17,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_20_DAILY_DUNE]);
+                            soilandtemp[17, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_50_DAILY_DUNE]) != -99.9)
-                        soilandtemp[18] += double.Parse(values[(int)columnIndex.SOIL_TEMP_50_DAILY_DUNE]);
+                        { soilandtemp[18,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_50_DAILY_DUNE]);
+                            soilandtemp[18, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_100_DAILY_DUNE]) != -99.9)
-                        soilandtemp[19] += double.Parse(values[(int)columnIndex.SOIL_TEMP_100_DAILY_DUNE]);
+                        { soilandtemp[19,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_100_DAILY_DUNE]);
+                            soilandtemp[19, 1] += 1.0;
+                        }
 
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_5_DAILY_GRASS]) != -99.9)
-                        soilandtemp[20] += double.Parse(values[(int)columnIndex.SOIL_TEMP_5_DAILY_GRASS]);
+                        { soilandtemp[20,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_5_DAILY_GRASS]);
+                            soilandtemp[20, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_10_DAILY_GRASS]) != -99.9)
-                        soilandtemp[21] += double.Parse(values[(int)columnIndex.SOIL_TEMP_10_DAILY_GRASS]);
+                        { soilandtemp[21,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_10_DAILY_GRASS]);
+                            soilandtemp[21, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_20_DAILY_GRASS]) != -99.9)
-                        soilandtemp[22] += double.Parse(values[(int)columnIndex.SOIL_TEMP_20_DAILY_GRASS]);
+                        { soilandtemp[22,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_20_DAILY_GRASS]);
+                            soilandtemp[22, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_50_DAILY_GRASS]) != -99.9)
-                        soilandtemp[23] += double.Parse(values[(int)columnIndex.SOIL_TEMP_50_DAILY_GRASS]);
+                        { soilandtemp[23,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_50_DAILY_GRASS]);
+                            soilandtemp[23, 1] += 1.0;
+                           }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_100_DAILY_GRASS]) != -99.9)
-                        soilandtemp[24] += double.Parse(values[(int)columnIndex.SOIL_TEMP_100_DAILY_GRASS]);
+                        { soilandtemp[24,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_100_DAILY_GRASS]);
+                            soilandtemp[24, 1] += 1.0;
+                        }
 
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_5_DAILY_BARE]) != -99.9)
-                        soilandtemp[25] += double.Parse(values[(int)columnIndex.SOIL_TEMP_5_DAILY_BARE]);
+                        { soilandtemp[25,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_5_DAILY_BARE]);
+                            soilandtemp[25, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_10_DAILY_BARE]) != -99.9)
-                        soilandtemp[26] += double.Parse(values[(int)columnIndex.SOIL_TEMP_10_DAILY_BARE]);
+                        { soilandtemp[26,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_10_DAILY_BARE]);
+                            soilandtemp[26, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_20_DAILY_BARE]) != -99.9)
-                        soilandtemp[27] += double.Parse(values[(int)columnIndex.SOIL_TEMP_20_DAILY_BARE]);
+                        { soilandtemp[27,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_20_DAILY_BARE]);
+                            soilandtemp[27, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_50_DAILY_BARE]) != -99.9)
-                        soilandtemp[28] += double.Parse(values[(int)columnIndex.SOIL_TEMP_50_DAILY_BARE]);
+                        { soilandtemp[28,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_50_DAILY_BARE]);
+                            soilandtemp[28, 1] += 1.0;
+                        }
                     if (double.Parse(values[(int)columnIndex.SOIL_TEMP_100_DAILY_BARE]) != -99.9)
-                        soilandtemp[29] += double.Parse(values[(int)columnIndex.SOIL_TEMP_100_DAILY_BARE]);
+                        { soilandtemp[29,0] += double.Parse(values[(int)columnIndex.SOIL_TEMP_100_DAILY_BARE]);
+                            soilandtemp[29, 1] += 1.0;
+                        }
+
+                   
 
                     if ((line = file.ReadLine()) != null)
                     {
@@ -2786,7 +2921,18 @@ namespace DatabaseMigratior
                     rhDailyMean = (rhdailymax + rhdailymin) / 2;
                 else
                     rhDailyMean = -99.99;
-                
+
+                //replace soilandtemp by mean
+                for (int soilTempCount1 = 0; soilTempCount1 < soilandtemp.GetLength(0); soilTempCount1++)
+                {
+                    if(soilandtemp[soilTempCount1, 1]==0) // check divide by 0
+                    {
+                        soilandtemp[soilTempCount1, 0] = -99.99;
+                        continue;
+                    }
+                    soilandtemp[soilTempCount1, 0] = soilandtemp[soilTempCount1, 0] / soilandtemp[soilTempCount1, 1];
+                }
+
                 //Calculate VPD
                 if (tdailyavg != -99.99 && rhDailyMean != -99.99)
                 {
@@ -2820,9 +2966,9 @@ namespace DatabaseMigratior
 
                    VpdAvg + "," + AGDD + "," + dayLength + ",";
                    
-                   for (int j = 0; j < soilandtemp.Length; j++)
+                   for (int j = 0; j < soilandtemp.GetLength(0); j++)
                    {
-                        sql = sql + soilandtemp[j] + ",";
+                        sql = sql + soilandtemp[j,0] + ",";
                    }
                    sql = sql.Remove(sql.LastIndexOf(','), 1);
                    sql += ")";
@@ -2835,14 +2981,16 @@ namespace DatabaseMigratior
                 try
                 {
                     cmd = new MySqlCommand(sql, conn);
-                    db_rows_count += cmd.ExecuteNonQuery();
+                    int insertOrUpdate = cmd.ExecuteNonQuery();
+                    db_rows_count = insertOrUpdate > 1 ? db_rows_count+1 : db_rows_count + insertOrUpdate;
                 }
                 catch (MySqlException e)
                 {
-                    MessageBox.Show("MySQL Error: " + e.ToString(), "Database ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("MySQL Error: " + e.ToString(), "Database ERROR!", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                     break;
                 }
-                
+               
                 
             }// end of outer while
 

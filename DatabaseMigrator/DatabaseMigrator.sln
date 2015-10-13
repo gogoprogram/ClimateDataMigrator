@@ -1,12 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseMigrator", "DatabaseMigrator\DatabaseMigrator.csproj", "{3D07A038-3A87-4F7C-B29C-D4A7DC1DC304}"
 EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup1", "Setup1\Setup1.isproj", "{557C5303-12DD-456A-A836-5FAE511C2BF7}"
-	ProjectSection(ProjectDependencies) = postProject
-		{3D07A038-3A87-4F7C-B29C-D4A7DC1DC304} = {3D07A038-3A87-4F7C-B29C-D4A7DC1DC304}
-	EndProjectSection
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ClimateDataMigrator", "ClimateDataMigrator\ClimateDataMigrator.vdproj", "{D406DF27-793A-491B-B4D0-776E61C54312}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,16 +26,11 @@ Global
 		{3D07A038-3A87-4F7C-B29C-D4A7DC1DC304}.Release|x86.Build.0 = Release|x86
 		{3D07A038-3A87-4F7C-B29C-D4A7DC1DC304}.SingleImage|x86.ActiveCfg = Release|x86
 		{3D07A038-3A87-4F7C-B29C-D4A7DC1DC304}.SingleImage|x86.Build.0 = Release|x86
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.CD_ROM|x86.ActiveCfg = CD_ROM
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.CD_ROM|x86.Build.0 = CD_ROM
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.Debug|x86.ActiveCfg = DVD-5
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.Debug|x86.Build.0 = DVD-5
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.DVD-5|x86.ActiveCfg = DVD-5
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.DVD-5|x86.Build.0 = DVD-5
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.Release|x86.ActiveCfg = SingleImage
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.Release|x86.Build.0 = SingleImage
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.SingleImage|x86.ActiveCfg = SingleImage
-		{557C5303-12DD-456A-A836-5FAE511C2BF7}.SingleImage|x86.Build.0 = SingleImage
+		{D406DF27-793A-491B-B4D0-776E61C54312}.CD_ROM|x86.ActiveCfg = Release
+		{D406DF27-793A-491B-B4D0-776E61C54312}.Debug|x86.ActiveCfg = Debug
+		{D406DF27-793A-491B-B4D0-776E61C54312}.DVD-5|x86.ActiveCfg = Debug
+		{D406DF27-793A-491B-B4D0-776E61C54312}.Release|x86.ActiveCfg = Release
+		{D406DF27-793A-491B-B4D0-776E61C54312}.SingleImage|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
